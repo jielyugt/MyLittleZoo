@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour {
 	void Start () {
 		
 	}
-	
+	/*
 	// Update is called once per frame
 	void Update () {
         curCountDown = curCountDown + Time.deltaTime;
@@ -29,6 +29,16 @@ public class Spawner : MonoBehaviour {
         
 		
 	}
+    */
+    public void Spawn() {
+        Vector3 nextSpawnPoint = new Vector3(Random.Range(XrangeLower, XrangeUpper), 0, Random.Range(ZrangeLower, ZrangeUpper));
+        Instantiate(animal, nextSpawnPoint, new Quaternion(0, 0, 0, 0));
+    }
+
+    public void setTimeToNextSpawn(float time) 
+    {
+        timeToNextSpawn = time;
+    }
 
 
 }
