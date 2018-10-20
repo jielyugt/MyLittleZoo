@@ -6,17 +6,16 @@ using UnityEngine;
 
 
 public class focusButton : MonoBehaviour {
-    public GameObject button1;
-    public GameObject button2;
+
+    public GameObject canvas1;
+    public GameObject canvas2;
+
+
 
     public void hitFocus () {
-        button1.SetActive(false);
-        button2.SetActive(false);
+        canvas1.SetActive(false);
+        canvas2.SetActive(true);
+
 
     }
-
-
-
-    // Update is called once per frame
-
 }
