@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 185477250}
   - component: {fileID: 185477249}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: connectButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 311658058}
   - component: {fileID: 311658057}
   m_Layer: 5
-  m_Name: Button
+  m_Name: focusButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,7 +366,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 311658058}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1797147764}
+        m_MethodName: hitFocus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &311658058
@@ -650,6 +661,7 @@ GameObject:
   - component: {fileID: 1218632280}
   - component: {fileID: 1218632282}
   - component: {fileID: 1218632281}
+  - component: {fileID: 1218632283}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -715,6 +727,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1218632279}
   m_CullTransparentMesh: 0
+--- !u!114 &1218632283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1218632279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2306252168304ef39f95cfa71f8fe24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button1: {fileID: 311658055}
+  button2: {fileID: 185477247}
 --- !u!1001 &1278888081
 Prefab:
   m_ObjectHideFlags: 0
@@ -847,6 +872,7 @@ GameObject:
   - component: {fileID: 1797147761}
   - component: {fileID: 1797147760}
   - component: {fileID: 1797147759}
+  - component: {fileID: 1797147764}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -944,3 +970,16 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1797147764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797147758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2306252168304ef39f95cfa71f8fe24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button1: {fileID: 311658055}
+  button2: {fileID: 185477247}
