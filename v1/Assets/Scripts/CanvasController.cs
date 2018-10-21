@@ -14,7 +14,7 @@ public class CanvasController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        timerScript = timerScript.GetComponent<timer>();
+        timerScript = Timer.GetComponent<timer>();
 		
 	}
 	
@@ -29,11 +29,12 @@ public class CanvasController : MonoBehaviour {
         timeSlider.SetActive(true);
         goButton.SetActive(true);
         timeText.text = "Set Timer";
-        timerScript.stopTimer();
     }
 
     public void  otherToMain() {
+        timerScript.stopTimer();
         focusCanvas.SetActive(false);
         mainCanvas.SetActive(true);
+
     }
 }
