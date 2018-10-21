@@ -8,6 +8,12 @@ public class MoveRandom : MonoBehaviour {
     NavMeshAgent navMeshAgent;
 
     public float timerForNewPath;
+
+    public float xLow;
+    public float xHigh;
+    public float yLow;
+    public float yHigh;
+
     bool inCoRoutine;
 
 	// Use this for initialization
@@ -15,12 +21,13 @@ public class MoveRandom : MonoBehaviour {
         navMeshAgent = GetComponent<NavMeshAgent>();
 	}
 
-    Vector3 getNewRandomPosition()
+    Vector3 getNewRandomPosition() 
     {
-        float x = Random.Range(-20, 20);
-        float z = Random.Range(-20, 20);
+        float x = Random.Range(xLow, xHigh);
+        float z = Random.Range(yLow, yHigh);
+        float y = 0.0F;
 
-        Vector3 pos = new Vector3(x, 0, z);
+        Vector3 pos = new Vector3(x, y, z);
         return pos;
 
     }
@@ -47,4 +54,5 @@ public class MoveRandom : MonoBehaviour {
         }
 		
 	}
+
 }
