@@ -8,8 +8,8 @@ public class CameraHandler : MonoBehaviour
     private static readonly float ZoomSpeedTouch = 0.1f;
     private static readonly float ZoomSpeedMouse = 0.5f;
 
-    private static readonly float[] BoundsX = new float[] { -10f, 5f };
-    private static readonly float[] BoundsZ = new float[] { -18f, -4f };
+    private static readonly float[] BoundsX = new float[] { -20f, 20f };
+    private static readonly float[] BoundsZ = new float[] { -50f, -30f };
     private static readonly float[] ZoomBounds = new float[] { 10f, 85f };
 
     private Camera cam;
@@ -48,12 +48,12 @@ public class CameraHandler : MonoBehaviour
                 // If the touch began, capture its position and its finger ID.
                 // Otherwise, if the finger ID of the touch doesn't match, skip it.
                 Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Began)
+                if (touch.phase == TouchPhase.Began && touch.position.y < Screen.height / 2)
                 {
                     lastPanPosition = touch.position;
                     panFingerId = touch.fingerId;
                 }
-                else if (touch.fingerId == panFingerId && touch.phase == TouchPhase.Moved)
+                else if (touch.fingerId == panFingerId && touch.phase == TouchPhase.Moved && touch.position.y < Screen.height / 2)
                 {
                     PanCamera(touch.position);
                 }
@@ -90,11 +90,11 @@ public class CameraHandler : MonoBehaviour
     {
         // On mouse down, capture it's position.
         // Otherwise, if the mouse is still down, pan the camera.
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Input.mousePosition.y < Screen.height / 1.5)
         {
             lastPanPosition = Input.mousePosition;
         }
-        else if (Input.GetMouseButton(0))
+        else if (Input.GetMouseButton(0) && Input.mousePosition.y < Screen.height / 1.5)
         {
             PanCamera(Input.mousePosition);
         }
