@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class goButton : MonoBehaviour {
 
-
-    public GameObject Slider;
     public timer tt;
     float value;
-    public GameObject button1;
+    public GameObject canvas2;
+
 
     public void hitGo()
     {
-        Slider.SetActive(false);
-        button1.SetActive(false);
-        //tt = GetComponent<timer>();
-        tt.setTime(value); // ???
+        canvas2.SetActive(false);
+        tt.setTime(value);
 
 
 
