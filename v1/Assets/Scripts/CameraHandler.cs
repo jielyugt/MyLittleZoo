@@ -48,12 +48,12 @@ public class CameraHandler : MonoBehaviour
                 // If the touch began, capture its position and its finger ID.
                 // Otherwise, if the finger ID of the touch doesn't match, skip it.
                 Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Began)
+                if (touch.phase == TouchPhase.Began && touch.position.y < Screen.height / 1.5)
                 {
                     lastPanPosition = touch.position;
                     panFingerId = touch.fingerId;
                 }
-                else if (touch.fingerId == panFingerId && touch.phase == TouchPhase.Moved)
+                else if (touch.fingerId == panFingerId && touch.phase == TouchPhase.Moved && touch.position.y < Screen.height / 1.5)
                 {
                     PanCamera(touch.position);
                 }
@@ -90,11 +90,11 @@ public class CameraHandler : MonoBehaviour
     {
         // On mouse down, capture it's position.
         // Otherwise, if the mouse is still down, pan the camera.
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Input.mousePosition.y < Screen.height / 1.5)
         {
             lastPanPosition = Input.mousePosition;
         }
-        else if (Input.GetMouseButton(0))
+        else if (Input.GetMouseButton(0) && Input.mousePosition.y < Screen.height / 1.5)
         {
             PanCamera(Input.mousePosition);
         }

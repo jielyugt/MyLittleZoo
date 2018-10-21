@@ -46,4 +46,7 @@ public class timer : MonoBehaviour {
 
 
     }
+    public void stopTimer() {
+        CheckTime = false;
+    }
 }

@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 111610197}
   - component: {fileID: 111610196}
   - component: {fileID: 111610195}
+  - component: {fileID: 111610199}
   m_Layer: 5
   m_Name: focusCanvas
   m_TagString: Untagged
@@ -209,6 +210,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &111610199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 111610194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f25d41887336491abb01e532355ce2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tt: {fileID: 1774640311}
+  canvas2: {fileID: 111610194}
+  timerText: {fileID: 0}
+  timeSlider: {fileID: 519855900}
+  self: {fileID: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,13 +853,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: -0.04456219, y: -0, z: -0, w: 0.9990066}
-  m_LocalPosition: {x: 0, y: 2.87, z: -10.2}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 23.1, z: -47.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -5.1080003, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!114 &534669906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,9 +1006,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f25d41887336491abb01e532355ce2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slider: {fileID: 519855900}
   tt: {fileID: 1774640311}
-  button1: {fileID: 545613369}
+  canvas2: {fileID: 111610194}
+  timerText: {fileID: 2021093117}
+  timeSlider: {fileID: 519855900}
+  self: {fileID: 545613369}
 --- !u!1 &630842039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,13 +1089,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 630842039}
-  m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
+  m_LocalRotation: {x: -0, y: 0.2960829, z: -0, w: 0.9551623}
   m_LocalPosition: {x: 0, y: -3.48, z: 0}
   m_LocalScale: {x: 25, y: 3, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 34.445004, z: 0}
 --- !u!1 &671812749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,6 +1572,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas1: {fileID: 0}
   canvas2: {fileID: 0}
+  text: {fileID: 0}
+  slider: {fileID: 0}
+  buttonGo: {fileID: 0}
 --- !u!1001 &1278888081
 Prefab:
   m_ObjectHideFlags: 0
@@ -1591,6 +1613,26 @@ Prefab:
     - target: {fileID: 4600477509758070, guid: f3d91c72fbd2e4b0dad31d084a21cab9, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114963884305126336, guid: f3d91c72fbd2e4b0dad31d084a21cab9,
+        type: 2}
+      propertyPath: xLow
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114963884305126336, guid: f3d91c72fbd2e4b0dad31d084a21cab9,
+        type: 2}
+      propertyPath: xHigh
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114963884305126336, guid: f3d91c72fbd2e4b0dad31d084a21cab9,
+        type: 2}
+      propertyPath: yLow
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114963884305126336, guid: f3d91c72fbd2e4b0dad31d084a21cab9,
+        type: 2}
+      propertyPath: yHigh
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3d91c72fbd2e4b0dad31d084a21cab9, type: 2}
@@ -2031,6 +2073,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas1: {fileID: 1797147758}
   canvas2: {fileID: 111610194}
+  text: {fileID: 2021093114}
+  slider: {fileID: 519855900}
+  buttonGo: {fileID: 545613369}
 --- !u!114 &1797147765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2042,8 +2087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32638d12a62c43b291458c8d9f97f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button1: {fileID: 311658055}
-  button2: {fileID: 185477247}
 --- !u!1 &2021093114
 GameObject:
   m_ObjectHideFlags: 0
