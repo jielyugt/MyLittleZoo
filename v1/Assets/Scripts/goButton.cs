@@ -1,21 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class goButton : MonoBehaviour {
 
-
-    public GameObject Slider;
     public timer tt;
     float value;
-    public GameObject button1;
-
+    public GameObject canvas2;
+    public Text timerText;
+    public GameObject timeSlider;
+    public GameObject self;
     public void hitGo()
     {
-        Slider.SetActive(false);
-        button1.SetActive(false);
-        //tt = GetComponent<timer>();
-        tt.setTime(value); // ???
+        timeSlider.SetActive(false);        //canvas2.SetActive(false);
+        self.SetActive(false);
+
+        tt.setTime(value);
 
 
 

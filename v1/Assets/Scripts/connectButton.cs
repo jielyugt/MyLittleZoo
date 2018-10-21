@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class connectButton : MonoBehaviour {
 
-    public GameObject button1;
-    public GameObject button2;
-
-    public void hitConnect()
-    {
-        button1.SetActive(false);
-        button2.SetActive(false);
-
-    }
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
 }
