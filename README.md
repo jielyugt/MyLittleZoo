@@ -1,4 +1,4 @@
-# MyLittleZoo - a HackGT 5 Project
+# MyLittleZoo - A HackGT 5 Project
 
 # Inspiration
 You are hanging out with your friends and they just keep looking at their phone. You don't even have to imagine it because it is happening every day. Thousands of engineers in silicon valley are working day and night to deprive your of attention from real life, and it's time to fight back.
